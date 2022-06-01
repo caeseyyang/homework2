@@ -1,0 +1,245 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  padding: 0 140px;
+  width: 1366px;
+  outline: 1px solid black;
+  line-height: 1.2;
+  font-weight: bold;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.index {
+  position: relative;
+  outline: 1px solid black;
+}
+.index nabar img {
+  padding: 24px 0 24px 0;
+  width: 215px;
+  height: 40px;
+}
+.index nabar button {
+  color: white;
+  border: 1px solid #FF5D50;
+  background-color: #FF5D50;
+  border-radius: 22px;
+  float: right;
+  margin: 24px 0 24px 0;
+  padding: 8px 30px;
+}
+.index .firstPage {
+  padding: 30px 0 117px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.index .firstPage .firstPageCont {
+  padding: auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.index .firstPage .firstPageCont p {
+  color: #56C4C5;
+  font-size: 18px;
+}
+.index .firstPage .firstPageCont h1 {
+  font-size: 48px;
+}
+.index .firstPage .firstPageCont h3 {
+  font-size: 20px;
+}
+.index .firstPage img {
+  width: 532px;
+  height: 534px;
+}
+.index .topBtn {
+  position: absolute;
+  right: -92px;
+  bottom: 23px;
+}
+.index .topBtn img {
+  height: 71px;
+  width: 71px;
+  border-radius: 50%;
+}
+.index .topBtn p {
+  color: white;
+  position: absolute;
+  line-height: 71px;
+  top: 0;
+  left: 20px;
+}
+
+.sns {
+  margin-top: 100px;
+  text-align: center;
+}
+.sns h2 {
+  font-size: 32px;
+}
+.sns .snsContents {
+  padding-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.sns .snsContent {
+  width: 244px;
+}
+.sns .snsContent img {
+  width: 90px;
+  height: 90px;
+}
+.sns .snsContent h3 {
+  font-size: 24px;
+  margin: 24px 0;
+}
+.sns .snsContent p {
+  color: #747474;
+}
+
+.role {
+  margin-top: 100px;
+  text-align: center;
+}
+.role .roles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.role .roleContent {
+  width: 260px;
+  border: 1px solid rgba(0, 0, 0, 0.0784313725);
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+  margin-right: 16px;
+}
+.role h2 {
+  font-size: 32px;
+}
+.role h3 {
+  font-size: 20px;
+  margin: 16px 0 48px 0;
+}
+.role p:nth-of-type(1) {
+  padding: 16px 0;
+  color: #56C4C5;
+}
+.role p:nth-of-type(2) {
+  padding: 0 16px 24px 16px;
+}
+
+.imfo {
+  margin-top: 100px;
+}
+.imfo .function {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 700px;
+}
+.imfo .functionCont {
+  width: 230px;
+  outline: 1px solid black;
+  padding: 32px 0 48px 32px;
+  border: 1px solid rgba(0, 0, 0, 0.0784313725);
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+  border-radius: 20px;
+  margin: 0 47px 28px 0;
+}
+.imfo .functionCont .circle {
+  width: 86px;
+  height: 86px;
+  z-index: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.0784313725);
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+  position: relative;
+}
+.imfo .functionCont img {
+  position: absolute;
+  z-index: 999;
+  left: 20px;
+  top: 19px;
+}
+.imfo .functionCont h3 {
+  margin: 24px 0 16px;
+  font-size: 18px;
+}

@@ -1,0 +1,297 @@
+@import "reset";
+// 變數
+$text-MiniSize: 18px;
+$text-SMsize: 20px;
+$text-MDsize: 24px;
+$text-LGsize: 32px;
+$text-color: #56C4C5;
+$text-weight: bold;
+
+// 共用組件
+
+// 長圓按鈕
+.longBtn {
+    font-size: $text-MiniSize;
+    padding: 12px 32px;
+    border-radius: 27px;
+    color: $text-color;
+    border-color: $text-color;
+}
+
+//文字顏色:綠
+.txtColor {
+    color: $text-color;
+}
+
+//h1字體
+h1 {
+    font-size: 48px;
+}
+
+//h2字體
+h2 {
+    font-size: $text-LGsize;
+}
+
+//h3字體
+h3 {
+    font-size: $text-MDsize;
+}
+
+//外層容器
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    max-width: 1366px;
+    line-height: 1.5;
+    font-weight: $text-weight;
+}
+
+// 首頁
+.index {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    right: 0;
+    bottom: 0;
+
+    nabar {
+        display: flex;
+        justify-content: space-between;
+        padding: 24px 100px;
+
+        img {
+            height: 40px;
+        }
+
+        button {
+            color: white;
+            border: 1px solid #FF5D50;
+            background-color: #FF5D50;
+            border-radius: 22px;
+            padding: 8px 30px;
+        }
+    }
+
+    // firstPage
+    .firstPage {
+        padding: 180px 100px;
+
+    }
+
+    // topbtn
+    .topBtn {
+        position: absolute;
+        right: 92px;
+        bottom: -23px;
+
+        img {
+            height: 71px;
+            width: 71px;
+            border-radius: 50%;
+        }
+
+        p {
+            color: white;
+            position: absolute;
+            line-height: 71px;
+            top: 0;
+            left: 20px;
+        }
+    }
+}
+
+// 方案費用
+//背景球
+.ball {
+    position: absolute;
+    width: 94px;
+    height: 361px;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    left: 0;
+    top: 317px;
+}
+
+.program {
+    text-align: center;
+    margin-top: 100px;
+    position: relative;
+
+    .person {
+        margin: 48px 54px;
+
+        button {
+            margin: 0 16px;
+
+            &:nth-of-type(1) {
+                background-color: $text-color;
+                border: $text-color;
+                color: white;
+            }
+        }
+    }
+
+    .programContent {
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+    }
+
+    .programService {
+        box-shadow: 0px 2px 10px #00000014;
+        border-radius: 12px;
+        margin: 0 21px;
+        padding: 32px 29px;
+
+        // h3 {
+        //     padding: 10px;
+        // }
+    }
+
+    .donatePrice {
+        font-size: 29px;
+
+        .donatePriceBtn {
+            padding: 24px 32px;
+            margin: 32px 0;
+            border-radius: 12px;
+            border-color: #F5F5F5;
+        }
+
+        P {
+            font-size: 12px;
+        }
+
+        span {
+            font-size: 12px;
+            color: black;
+        }
+    }
+
+    li {
+        text-align: start;
+        margin: 16px;
+        font-size: 16px;
+    }
+
+    li::before {
+        content: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_check.svg");
+    }
+
+}
+
+// 常見問題
+.qa {
+    margin-top: 100px;
+    text-align: center;
+    padding: 0 231px;
+
+    h2 {
+        margin-bottom: 48px;
+    }
+
+    .question {
+        box-shadow: 0px 2px 10px #00000014;
+        border-radius: 12px;
+        padding: 16px 32px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+
+    }
+
+    .questionAns {
+        box-shadow: 0px 2px 10px #00000014;
+        border-radius: 12px;
+        padding: 16px 32px;
+        text-align: start;
+
+        p:nth-of-type(2) {
+            margin-top: 24px;
+            color: #747474;
+        }
+
+        img {
+            float: right;
+        }
+    }
+}
+
+//footer
+footer {
+    margin-top: 100px;
+    text-align: center;
+    padding: 16px;
+    background-color: #F5F5F5;
+}
+
+// rwd
+@media(max-width:375px) {
+    .container{
+        max-width: 100%;
+    }
+    // 首頁
+    .index{
+        background-size: cover;
+        width: 100%;
+        nabar{
+            width: 90%;
+            justify-content: space-around;
+            padding: 10px ;
+            border-bottom: 1px solid black;
+            img{
+                margin: 0%;
+                // width: 60%;
+            }
+            button{
+                padding: 10px;
+                // width: 80%;
+            }
+        }
+        .firstPage{
+            padding-left: 10px;
+        }
+        h1{
+            font-size: $text-LGsize;
+        }
+        .topBtn{
+            right: 0;
+            bottom: -80px;
+
+        }
+    }
+    // 方案費用
+    .programContent{
+        width: 100%;
+        flex-wrap: wrap;
+        .donatePriceBtn{
+            width: 40%;
+            padding: 0 10px ;
+            margin: 10px;
+        }
+        h2{
+            font-size: $text-SMsize;
+        }
+        .programService{
+            padding: 20px 0;
+        }
+    }
+    // 常見問題
+    .qa{
+        padding: 0;
+        width: 100%;
+    }
+    .qaContent{
+        width: 100%;
+        padding: 0 ;
+
+    }
+}
+

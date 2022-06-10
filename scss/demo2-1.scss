@@ -1,18 +1,39 @@
 @import "reset";
 // 變數
+$text-MiniSize: 18px;
 $text-SMsize: 20px;
 $text-MDsize: 24px;
 $text-LGsize: 32px;
 $text-color: #56C4C5;
 $text-weight: bold;
 
+//共用組件
+//文字顏色:綠
+.txtColor {
+    color: $text-color;
+}
+// 文字大小
+h1 {
+    font-size: 48px;
+}
+
+h2{
+    font-size: $text-LGsize;
+}
+h3{
+    font-size: $text-MDsize;
+}
+h4{
+    font-size: $text-SMsize;
+}
+h5{
+    font-size: $text-MiniSize;
+}
 // start
 .container {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
-    padding: 0 140px;
     width: 1366px;
-    outline: 1px solid black;
     line-height: 1.2;
     font-weight: $text-weight;
     background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg');
@@ -22,13 +43,13 @@ $text-weight: bold;
 
 .index {
     position: relative;
-    outline: 1px solid black;
-
-    // nabar
+    display: flex;
+    flex-direction: column;
     nabar {
+        display: flex;
+        justify-content: space-between;
+        padding: 24px 100px;
         img {
-            padding: 24px 0 24px 0;
-            width: 215px;
             height: 40px;
         }
 
@@ -37,8 +58,6 @@ $text-weight: bold;
             border: 1px solid #FF5D50;
             background-color: #FF5D50;
             border-radius: 22px;
-            float: right;
-            margin: 24px 0 24px 0;
             padding: 8px 30px;
         }
     }
@@ -47,27 +66,12 @@ $text-weight: bold;
     .firstPage {
         padding: 30px 0 117px 0;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 
-        // outline: 1px solid black;
         .firstPageCont {
-            padding: auto 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
-
-            p {
-                color: $text-color;
-                font-size: 18px;
-            }
-
-            h1 {
-                font-size: 48px;
-            }
-
-            h3 {
-                font-size: $text-SMsize;
-            }
         }
 
         img {
@@ -79,7 +83,7 @@ $text-weight: bold;
     // topbtn
     .topBtn {
         position: absolute;
-        right: -92px;
+        right: 48px;
         bottom: 23px;
 
         img {
@@ -98,13 +102,10 @@ $text-weight: bold;
     }
 }
 
+// 三大平台
 .sns {
     margin-top: 100px;
     text-align: center;
-
-    h2 {
-        font-size: $text-LGsize;
-    }
 
     .snsContents {
         padding-top: 48px;
@@ -121,7 +122,6 @@ $text-weight: bold;
         }
 
         h3 {
-            font-size: $text-MDsize;
             margin: 24px 0;
         }
 
@@ -131,6 +131,7 @@ $text-weight: bold;
     }
 }
 
+// 4個角色扮演
 .role {
     margin-top: 100px;
     text-align: center;
@@ -148,12 +149,7 @@ $text-weight: bold;
         margin-right: 16px;
     }
 
-    h2 {
-        font-size: $text-LGsize;
-    }
-
-    h3 {
-        font-size: 20px;
+    h4 {
         margin: 16px 0 48px 0;
     }
 
@@ -167,23 +163,28 @@ $text-weight: bold;
     }
 }
 
+// 機器人
 .imfo {
     margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
 
-    .function {
+    .imfo_function {
         display: flex;
         flex-wrap: wrap;
         width: 700px;
     }
 
+    // 左邊4方塊
     .functionCont {
-        width: 230px;
-        outline: 1px solid black;
-        padding: 32px 0 48px 32px;
+        width: 166px;
+        padding: 32px 32px 48px 32px;
         border: 1px solid #00000014;
         box-shadow: 0px 2px 10px #00000014;
         border-radius: 20px;
         margin: 0 47px 28px 0;
+
         .circle {
             width: 86px;
             height: 86px;
@@ -193,16 +194,103 @@ $text-weight: bold;
             box-shadow: 0px 2px 10px #00000014;
             position: relative;
         }
+
         img {
             position: absolute;
             z-index: 999;
             left: 20px;
-            top: 19px;    
+            top: 19px;
         }
 
-        h3 {
+        h5 {
             margin: 24px 0 16px;
-            font-size: 18px;
         }
     }
+
+    // 右邊文字區塊
+    .imfoText {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+
+        h5 {
+            margin: 16px 0 24px 0;
+        }
+
+        button {
+            padding: 12px 32px;
+            border-radius: 27px;
+            font-size: $text-MiniSize;
+            background-color: $text-color;
+            color: white;
+            border: 1px solid $text-color;
+        }
+    }
+}
+
+// 好評如潮
+.comment {
+    margin-top: 100px;
+    line-height: 1.5;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 104px;
+    }
+
+    .allComment {
+        display: flex;
+        justify-content: center;
+    }
+
+    .commentCont {
+        width: 288px;
+        padding: 48px 32px 24px 32px;
+        box-shadow: 0px 2px 10px #00000014;
+        border-radius: 12px;
+        position: relative;
+        margin: 0 16px;
+
+        img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            position: absolute;
+            top: -50px;
+        }
+
+        hr {
+            margin: 24px 0;
+        }
+    }
+}
+
+.bottomImg {
+    margin-top: 100px;
+    height: 503px;
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        margin: 260px 0 48px 0;
+    }
+
+    button {
+        padding: 12px 32px;
+        border-radius: 27px;
+        font-size: $text-MiniSize;
+        background-color: $text-color;
+        color: white;
+        border: 1px solid $text-color;
+    }
+}
+footer{
+    background-color: #F5F5F5;
+    text-align: center;
+    padding: 16px;
 }

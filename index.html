@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="scss/index.scss">
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -13,11 +14,11 @@
 <body>
     <div class="container">
         <div class="index">
-            <nabar>
+            <navbar>
                 <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/logo.png"
                     alt="logo">
                 <button>方案費用</button>
-            </nabar>
+            </navbar>
             <div class="firstPage">
                 <div class="firstPageCont">
                     <h5 class="txtColor">ChatTalker最全面的聊天機器人</h5>
@@ -28,7 +29,7 @@
                 <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home.svg"
                     alt="homeImg">
             </div>
-            <div class="topBtn">
+            <div class="topBtn" id="topBtn" onclick="topFunction()">
                 <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg"
                     alt="top">
                 <p>TOP</p>
@@ -169,13 +170,13 @@
         </div>
         <div class="bottomImg">
             <h2>\ 美好用戶體驗，從對話開始 /</h2>
-            <button>方案費用</button>
+            <a href="./page2.html">方案費用</a> 
         </div>
         <footer>
             <p>© 2022 chatTalker. All Rights Reserved.</p>
         </footer>
-
     </div>
+    <script src="./all.js"></script>
 </body>
 
 </html>

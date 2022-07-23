@@ -1,57 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 .txtColor {
   color: #56C4C5;
 }
@@ -76,6 +22,10 @@ h5 {
   font-size: 18px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 auto;
@@ -85,6 +35,7 @@ h5 {
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg");
   background-repeat: no-repeat;
   background-position: right top;
+  z-index: 0;
 }
 
 .index {
@@ -97,7 +48,7 @@ h5 {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.index nabar {
+.index navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,10 +57,10 @@ h5 {
           justify-content: space-between;
   padding: 24px 100px;
 }
-.index nabar img {
+.index navbar img {
   height: 40px;
 }
-.index nabar button {
+.index navbar button {
   color: white;
   border: 1px solid #FF5D50;
   background-color: #FF5D50;
@@ -141,9 +92,12 @@ h5 {
   height: 534px;
 }
 .index .topBtn {
-  position: absolute;
-  right: 48px;
+  position: fixed;
+  right: 148px;
   bottom: 23px;
+}
+.index .topBtn:hover {
+  cursor: pointer;
 }
 .index .topBtn img {
   height: 71px;
@@ -343,7 +297,8 @@ h5 {
 .bottomImg h2 {
   margin: 260px 0 48px 0;
 }
-.bottomImg button {
+.bottomImg a {
+  text-decoration: none;
   padding: 12px 32px;
   border-radius: 27px;
   font-size: 18px;
@@ -356,4 +311,122 @@ footer {
   background-color: #F5F5F5;
   text-align: center;
   padding: 16px;
+}
+
+@media (max-width: 375px) {
+  .container {
+    max-width: 100%;
+    background-image: none;
+  }
+
+  .index {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home_sm.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-position: 50% 85%;
+  }
+  .index navbar {
+    padding: 10px;
+    border-bottom: 2px solid #FFD153;
+  }
+  .index navbar img {
+    width: 160px;
+  }
+  .index navbar button {
+    padding: 10px;
+  }
+  .index .firstPage {
+    padding: 10px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .index .firstPage img {
+    width: 100%;
+  }
+  .index .firstPageCont h1 {
+    font-size: 36px;
+  }
+  .index .firstPageCont h4 {
+    font-size: 19px;
+  }
+  .index .topBtn {
+    right: 10px;
+  }
+
+  .snsContents {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .snsContents .snsContent {
+    margin-top: 40px;
+  }
+
+  .roles {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .roles .roleContent {
+    margin-top: 20px;
+  }
+
+  .imfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .imfo .imfo_function {
+    width: 250px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .imfo .functionCont {
+    margin-top: 20px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .imfo .imfoText {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 50px;
+  }
+
+  .comment .commentCont {
+    margin: 50px 0 50px 0;
+  }
+  .comment .allComment {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .bottomImg {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/footer_sm.svg");
+  }
+  .bottomImg h2 {
+    font-size: 28px;
+  }
+  .bottomImg a {
+    display: block;
+  }
+  .bottomImg a:hover {
+    cursor: pointer;
+  }
 }
